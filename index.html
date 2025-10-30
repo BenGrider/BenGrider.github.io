@@ -9,8 +9,19 @@
   <p>Testing the website...</p>
 
   <script>
+    let messageTrue = 'Spooky Scary Skeletons';
+    let messageFalse = 'Send Shivers Down Your Spine';
+    let message = true;
     function Halloween() {
-      document.getElementById("HalloweenWords").textContent = "Spooky Ghost!";
+
+      if(message == true) {
+        document.getElementById("HalloweenWords").textContent = messageTrue;
+        message = !message;
+      }
+      else if(message == false) {
+        document.getElementById("HalloweenWords").textContent = messageFalse;
+        message = !message;
+      }
     }
   </script>
   

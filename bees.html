@@ -7,7 +7,7 @@
   <h1 id="header">WAIT WAIT WAIT WAIT...</h1>
   <button onclick="ScriptIter()">line?!</button>
   
-  <p id="currLine">Theres a B?? page refrech check iter: 0</p>
+  <p id="currLine">Theres a B?? page refrech check iter: 2</p>
   
   <script>
   let lines = [];
@@ -20,7 +20,7 @@
     });
 
   function ScriptIter(){
-    if (lines.length === 0) {document.getElementById("currLine").innerText = "file not loaded";}
+    if (lines.length === 0) {document.getElementById("currLine").innerText = "file not loaded"; return;}
     if(index < lines.length) {
       document.getElementById("currLine").innerText = lines[index];
       index++

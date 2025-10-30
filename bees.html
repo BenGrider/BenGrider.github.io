@@ -13,9 +13,14 @@
   let lines = [];
   let index = 0;
 
-  fetch('BeeScript.txt').then(response => response.txt()).then(text => { lines = text.split(/\r?\n/)});
+  fetch('BeeScript.txt')
+    .then(response => response.txt())
+    .then(text => {
+      lines = text.split(/\r?\n/);
+    });
 
   function ScriptIter(){
+    if (lines.length === 0) {document.getElementById("currLine").innerText = "file not loaded";}
     if(index < lines.length) {
       document.getElementById("currLine").innerText = lines[index];
       index++

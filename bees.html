@@ -4,12 +4,24 @@
   <title>Bees</title>
 </head>
 <body>
-  <h1 id="HalloweenWords">Pumpkin Head!</h1>
-  <button onclick="Halloween()">Spooky Time!</button>
-  <p>Testing the website...</p>
-  <a href = "bees.html">Michael with a B</a>
-
+  <h1 id="header">WAIT WAIT WAIT WAIT...</h1>
+  <button onclick="ScriptIter()">line?!</button>
+  
+  <p id="currLine">Theres a B?? </p>
+  
   <script>
+  let lines = [];
+  let index = 0;
+
+  fetch('BeeScript.txt').then(response => response.txt()).then(text => { lines = text.split(/\r?\n/)});
+
+  function ScriptIter(){
+    if(index < lines.length) {
+      document.getElementById("currLine").innerText = lines[index];
+      index++
+    }
+    else { document.getElementById("currLine").innerText = "And Scene"}
+  }
     
   </script>
   

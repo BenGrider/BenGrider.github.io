@@ -4,23 +4,24 @@
   <title>Ben's Website</title>
 </head>
 <body>
-  <h1 id="HalloweenWords">Pumpkin Head!</h1>
-  <button onclick="Halloween()">Spooky Time!</button>
-  <p>Testing the website...</p>
-  <a href = "bees.html">Michael with a B</a>
+  <h1 id="MOTD">Welcome to my Website!</h1>
+  <button onclick="Thanksgiving()">Being thankful</button>
+  <p>Please feel free to reach out to my email at benwatsongrider@gmail.com for any questions, and be aware that I am not familiar with Javascript or html as of 10-30-25</p>
+  <p>This site is currently for learning and testing</p>
+  <a href = "bees.html">Javascript reading a file test</a>
 
   <script>
-    let messageTrue = 'Spooky Scary Skeletons';
-    let messageFalse = 'Send Shivers Down Your Spine';
+    let messageTrue = 'Thankful for your time';
+    let messageFalse = 'Thankful for your job offer consideration ;)';
     let message = true;
-    function Halloween() {
+    function Thanksgiving() {
 
       if(message == true) {
-        document.getElementById("HalloweenWords").textContent = messageTrue;
+        document.getElementById("MOTD").textContent = messageTrue;
         message = !message;
       }
       else if(message == false) {
-        document.getElementById("HalloweenWords").textContent = messageFalse;
+        document.getElementById("MOTD").textContent = messageFalse;
         message = !message;
       }
     }

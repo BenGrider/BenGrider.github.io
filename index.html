@@ -7,7 +7,11 @@
     margin: 0%;
     font-family: Cabin;
   }
-
+  .tabBar {
+    position: fixed;
+    top: 16px;
+    background-color: #f6eee3;
+  }
   .allTabLinks {
     position: fixed;
     top: 0;
@@ -45,11 +49,13 @@
 </head>
 
 <body>
-<div class="allTabLinks">
-  <button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
-  <button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">Word of the Day</button>
-  <button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
-  <button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
+<div class="tabBar">
+  <div class="allTabLinks">
+    <button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
+    <button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">Word of the Day</button>
+    <button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
+    <button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
+  </div>
 </div>
 
 <div id="Home" class="tabContent">

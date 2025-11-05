@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<head>
 <style>
   body, html {
     height: 100%;
@@ -37,8 +37,11 @@
   #About {background-color: orange;}
   
 </style>
+</head>
 
-<button class="tabLink" onlclick="openPage('Home', this, 'red')">Home</button>
+<body>
+
+<button class="tabLink" onlclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
 <button class="tabLink" onlclick="openPage('WordOfTheDay', this, 'blue')">Word of the Day</button>
 <button class="tabLink" onlclick="openPage('Contact', this, 'green')">Contact</button>
 <button class="tabLink" onlclick="openPage('About', this, 'orange')">About</button>
@@ -48,7 +51,7 @@
   <p>Welcome to my page!</p>
 </div>
   
-<div id="Word of the Day" class="tabContent">
+<div id="WordOfTheDay" class="tabContent">
   <h3>Word of the Day</h3>
   <p>Bamboozle</p>
 </div>
@@ -66,15 +69,14 @@
 
 <script>
   function openPage(pageName, elmnt, color) {
-    
     var i, tabContent, tabLinks;
     
-    tabContent = document.getElementByClassName("tabContent");
+    tabContent = document.getElementsByClassName("tabContent");
     for(i = 0 ; i < tabContent.length ; i++) {
       tabContent[i].style.display = "none";
     }
 
-    tabLinks = document.getElementByClassName("tabLink");
+    tabLinks = document.getElementsByClassName("tabLink");
     for(i = 0 ; i < tabLinks.length ; i++) {
       tabLinks[i].style.backgroundColor = "";
     }
@@ -87,4 +89,5 @@
   document.getElementById("defaultOpen").click();
 </script>
   
+</body>
 </html>

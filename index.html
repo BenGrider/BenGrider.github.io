@@ -8,10 +8,12 @@
     font-family: Cabin;
   }
 
-  .tabLink {
+  .allTabLinks {
     position: fixed;
     top: 0;
     right: 0;
+  }
+  .tabLink {
     background-color: #f6eee3;
     color: black;
     float: left;
@@ -43,11 +45,12 @@
 </head>
 
 <body>
-
-<button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
-<button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">Word of the Day</button>
-<button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
-<button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
+<div class="allTabLinks">
+  <button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
+  <button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">Word of the Day</button>
+  <button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
+  <button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
+</div>
 
 <div id="Home" class="tabContent">
   <h3>Home</h3>

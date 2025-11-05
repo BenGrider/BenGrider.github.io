@@ -9,8 +9,8 @@
   }
 
   .tabLink {
-    background-color: #555;
-    color: white;
+    background-color: #eee7d7;
+    color: black;
     float: left;
     border: none;
     outline: none;
@@ -21,7 +21,7 @@
   }
 
   .tabLink:hover {
-    background-color: #777;
+    background-color: #e5decf;
   }
 
   .tabContent {
@@ -31,20 +31,20 @@
     height: 100%;
   }
 
-  #Home {background-color: red;}
-  #WordOfTheDay {background-color: blue;}
-  #Contact {background-color: green;}
-  #About {background-color: orange;}
+  #Home {background-color: #eee7d7;}
+  #WordOfTheDay {background-color: #eee7d7;}
+  #Contact {background-color: #eee7d7;}
+  #About {background-color: #eee7d7;}
   
 </style>
 </head>
 
 <body>
 
-<button class="tabLink" onclick="openPage('Home', this, 'red')" id="defaultOpen">Home</button>
-<button class="tabLink" onclick="openPage('WordOfTheDay', this, 'blue')">Word of the Day</button>
-<button class="tabLink" onclick="openPage('Contact', this, 'green')">Contact</button>
-<button class="tabLink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
+<button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">Word of the Day</button>
+<button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
+<button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
 
 <div id="Home" class="tabContent">
   <h3>Home</h3>

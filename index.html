@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0%;
+    font-family: Cabin;
+  }
+
+  .tabLink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 18px;
+    width: 25%;
+  }
+
+  .tabLink:hover {
+    background-color: #777;
+  }
+
+  .tabContent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+  }
+
+  #Home {background-color: red;}
+  #WordOfTheDay {background-color: blue;}
+  #Contact {background-color: green;}
+  #About {background-color: orange;}
+  
+</style>
+
+<button class="tabLink" onlclick="openPage('Home', this, 'red')">Home</button>
+<button class="tabLink" onlclick="openPage('WordOfTheDay', this, 'blue')">Word of the Day</button>
+<button class="tabLink" onlclick="openPage('Contact', this, 'green')">Contact</button>
+<button class="tabLink" onlclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabContent">
+  <h3>Home</h3>
+  <p>Welcome to my page!</p>
+</div>
+  
+<div id="Word of the Day" class="tabContent">
+  <h3>Word of the Day</h3>
+  <p>Bamboozle</p>
+</div>
+
+<div id="Contact" class="tabContent">
+  <h3>Contact Me!</h3>
+  <p>benwatsongrider@gmail.com</p>
+  <p>linkedin.com/in/bengrider/</p>
+</div>
+
+<div id="About" class="tabContent">
+  <h3>About Me</h3>
+  <p>TO BE ADDED</p>
+</div>
+
+<script>
+  function openPage(pageName, elmnt, color) {
+    
+    var i, tabContent, tabLinks;
+    
+    tabContent = document.getElementByClassName("tabContent");
+    for(i = 0 ; i < tabContent.length ; i++) {
+      tabContent[i].style.display = "none";
+    }
+
+    tabLinks = document.getElementByClassName("tabLink");
+    for(i = 0 ; i < tabLinks.length ; i++) {
+      tabLinks[i].style.backgroundColor = "";
+    }
+
+    document.getElementById(pageName).style.display = "block";
+
+    elmnt.style.backgroundColor = color;
+
+  }
+  document.getElementById("defaultOpen").click();
+</script>
+  
+</html>

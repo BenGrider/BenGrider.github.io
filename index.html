@@ -28,11 +28,7 @@
     gap: 4px;
     background-color: #f6eee3;
   }
-  .allTabLinks {
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
+
   .tabLink {
     background-color: #f6eee3;
     color: black;
@@ -64,12 +60,10 @@
 
 <body>
 <div class="tabBar">
-  <div class="allTabLinks">
-    <button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
-    <button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">WOTD!</button>
-    <button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
-    <button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
-  </div>
+  <button class="tabLink" onclick="openPage('Home', this, '#eee7d7')" id="defaultOpen">Home</button>
+  <button class="tabLink" onclick="openPage('WordOfTheDay', this, '#eee7d7')">WOTD!</button>
+  <button class="tabLink" onclick="openPage('Contact', this, '#eee7d7')">Contact</button>
+  <button class="tabLink" onclick="openPage('About', this, '#eee7d7')">About</button>
 </div>
 
 <div id="Home" class="tabContent">

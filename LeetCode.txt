@@ -1,0 +1,39 @@
+QUESTION
+1
+Two Sum
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> answer = {};
+        for(int i = 0 ; i < nums.size() ; i++) {
+            for(int j = 1 ; j < nums.size() ; j++) {
+                if(nums[i] + nums[j] == target && i != j) {
+                    vector<int> answer = {i, j};
+                    return answer;
+                }
+            }
+        }
+        return answer;
+    }
+
+};
+/*
+
+Using two for loops go through each combination of index i and j and compare
+the summation of them. 
+
+If true, which in constraints there is always 1 correct answer, return the
+index i, and j in a vector of type int
+
+If false, I returned an empty vector.
+
+Line 7: if(nums[i] + nums[j] == target) {
+Possible issues with code on line 7: If the target value is never reached, 
+then i and j will be equal and be representing the same value. 
+If this value is half the target value, then there will be a false positive given to the output.
+
+Fix: Add an additional clause that states i cannot equal j.
+Line 7 Updated: if(nums[i] + nums[j] == target && i != j)
+
+*/
+-1
